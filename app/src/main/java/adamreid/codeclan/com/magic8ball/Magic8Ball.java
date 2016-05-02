@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class Magic8Ball extends AppCompatActivity{
 
     private ImageButton mButtonEightBall;
     private TextView mDisplayResponse;
+    private EditText mQuestionAsked;
     private ArrayList<String> mResponses;
 
     @Override
@@ -34,6 +36,7 @@ public class Magic8Ball extends AppCompatActivity{
 
                 mDisplayResponse = (TextView) findViewById(R.id.response_eight_ball);
                 mDisplayResponse.setText( generateResponse() );
+
             }
         });
     }
@@ -61,10 +64,25 @@ public class Magic8Ball extends AppCompatActivity{
         mResponses.add("Outlook not so good");
         mResponses.add("Very doubtful");
 
-        Random random = new Random();
-        int result = random.nextInt(mResponses.size());
+        mQuestionAsked = (EditText) findViewById(R.id.question);
+        String question = mQuestionAsked.getText().toString();
+        Log.d("Magic8Ball:", question);
 
-        return mResponses.get(result);
+
+        if( question.toLowerCase().contains("lottery")){
+            return "You have a 1 in 45,057,474 chance of winning the lottery";
+        }
+        if( question.toLowerCase().contains("exam") || question.contains("exams")){
+            return "As long as you studied hard, you'll do great!";
+        }
+        if ((question.toLowerCase().contains("greatest") || question.toLowerCase().contains("best")) && question.toLowerCase().contains("footballer")){
+            return "Its either Zinedine Zidane or James McFadden";
+        }
+        else {
+            Random random = new Random();
+            int result = random.nextInt(mResponses.size());
+            return mResponses.get(result);
+        }
     }
 }
 

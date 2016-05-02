@@ -16,6 +16,15 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"/>
 
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/shaddow"
+        android:hint="@string/enter_text_prompt"
+        android:textColorHint="@color/grey"/>
 
     <ImageButton
         android:id="@+id/button_eight_ball"
@@ -32,7 +41,7 @@
         android:text="( Click Ball )"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/orange"/>
 
     <TextView
         android:id="@+id/response_eight_ball"
