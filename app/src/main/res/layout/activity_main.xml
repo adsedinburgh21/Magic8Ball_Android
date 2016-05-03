@@ -14,6 +14,7 @@
         android:textColor="@color/orange"
         android:gravity="center"
         android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
         android:textStyle="bold"/>
 
     <EditText
@@ -22,7 +23,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
-        android:background="@color/shaddow"
+        android:background="@color/shadow"
         android:hint="@string/enter_text_prompt"
         android:textColorHint="@color/grey"/>
 
@@ -41,7 +42,8 @@
         android:text="( Click Ball )"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:textColor="@color/orange"/>
+        android:textColor="@color/orange"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/response_eight_ball"
@@ -50,11 +52,12 @@
         android:layout_gravity="center"
         android:textSize="35sp"
         android:maxWidth="225dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:gravity="center"
         android:textStyle="italic"
-        android:background="@color/shaddow"/>
+        android:fontFamily="cursive"
+        android:background="@color/shadow"/>
 
 
 
