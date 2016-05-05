@@ -1,5 +1,6 @@
 package adamreid.codeclan.com.magic8ball;
 
+import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.util.Random;
 /**
  * Created by user on 01/05/2016.
  */
-public class Magic8Ball extends AppCompatActivity{
+public class Magic8Ball extends Activity{
 
     private ImageButton mButtonEightBall;
     private TextView mDisplayResponse;

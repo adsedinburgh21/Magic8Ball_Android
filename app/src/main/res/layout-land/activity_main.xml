@@ -13,46 +13,47 @@
         android:textSize="30sp"
         android:textColor="@color/orange"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="cursive"
         android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/question"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="500dp"
+        android:gravity="center"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
         android:background="@color/shadow"
+        android:layout_marginTop="10dp"
         android:hint="@string/enter_text_prompt"
         android:textColorHint="@color/grey"/>
 
     <ImageButton
         android:id="@+id/button_eight_ball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:scaleType="centerInside"
         android:src="@drawable/magic8ball"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_gravity="center"
         android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="( Click Ball )"
+        android:text="@string/click_ball"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:textColor="@color/orange"
-        android:textSize="20sp"/>
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/response_eight_ball"
-        android:layout_width="350dp"
-        android:layout_height="125dp"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
-        android:textSize="35sp"
-        android:maxWidth="225dp"
+        android:textSize="30sp"
         android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:gravity="center"

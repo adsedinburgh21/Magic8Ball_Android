@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/header_eight_ball"
-        android:textSize="30sp"
+        android:textSize="60sp"
         android:textColor="@color/orange"
         android:gravity="center"
         android:layout_marginTop="20dp"
@@ -19,21 +19,24 @@
 
     <EditText
         android:id="@+id/question"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="600dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
         android:background="@color/shadow"
         android:hint="@string/enter_text_prompt"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
         android:textColorHint="@color/grey"/>
 
     <ImageButton
         android:id="@+id/button_eight_ball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
+        android:layout_width="350dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/magic8ball"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_gravity="center"
         android:background="@null"/>
 
@@ -42,18 +45,18 @@
         android:layout_height="wrap_content"
         android:text="( Click Ball )"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/orange"
-        android:textSize="20sp"/>
+        android:textSize="40sp"/>
 
     <TextView
         android:id="@+id/response_eight_ball"
-        android:layout_width="350dp"
-        android:layout_height="125dp"
+        android:layout_width="600dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        android:textSize="35sp"
+        android:textSize="55sp"
         android:maxWidth="225dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:gravity="center"
         android:textStyle="italic"

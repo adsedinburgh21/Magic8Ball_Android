@@ -2,4 +2,5 @@
     <string name="app_name">Magic 8 Ball</string>
     <string name="header_eight_ball">Ask the Magic 8 Ball a Yes or No Question !</string>
     <string name="enter_text_prompt">Enter question here</string>
+    <string name="click_ball">( Click Ball )</string>
 </resources>

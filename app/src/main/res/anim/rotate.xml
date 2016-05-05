@@ -20,7 +20,7 @@
         android:duration="1250">
     </scale>
     <scale
-        android:startOffset="1250"
+        android:startOffset="2500"
         android:fromXScale="1"
         android:toXScale="0.5"
         android:fromYScale="1"
