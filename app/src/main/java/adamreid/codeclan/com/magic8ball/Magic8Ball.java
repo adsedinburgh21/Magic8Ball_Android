@@ -1,10 +1,8 @@
 package adamreid.codeclan.com.magic8ball;
 
 import android.app.Activity;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -21,6 +19,7 @@ import java.util.Random;
  */
 public class Magic8Ball extends Activity{
 
+    private TextView mHeader;
     private ImageButton mButtonEightBall;
     private TextView mDisplayResponse;
     private EditText mQuestionAsked;
@@ -33,6 +32,7 @@ public class Magic8Ball extends Activity{
         setContentView(R.layout.activity_main);
 
         mButtonEightBall = (ImageButton) findViewById(R.id.button_eight_ball);
+        mHeader = (TextView) findViewById(R.id.header);
 
         mButtonEightBall.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,9 +41,9 @@ public class Magic8Ball extends Activity{
 
                 mDisplayResponse = (TextView) findViewById(R.id.response_eight_ball);
                 mDisplayResponse.setText( generateResponse() );
-                fade(view);
-                rotate(view);
-                playSound();
+                doAnimation(mDisplayResponse, R.anim.fade);
+                doAnimation(mButtonEightBall, R.anim.rotate_and_zoom);
+                playSound(R.raw.magic_harp);
             }
         });
     }
@@ -73,7 +73,7 @@ public class Magic8Ball extends Activity{
 
         mQuestionAsked = (EditText) findViewById(R.id.question);
         String question = mQuestionAsked.getText().toString();
-        Log.d("Magic8Ball:", question);
+//        Log.d("Magic8Ball:", question);
 
 
         if( question.matches("")){
@@ -99,22 +99,13 @@ public class Magic8Ball extends Activity{
     }
 
 
-
-
-
-    public void fade(View view){
-        Animation fade = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
-        mDisplayResponse.startAnimation(fade);
+    public void doAnimation( View element, int animationName){
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), animationName);
+        element.startAnimation(animation);
     }
 
-    public void rotate(View view){
-        Animation rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-        mButtonEightBall.startAnimation(rotate);
-    }
-
-    public void playSound(){
-        MediaPlayer sound = MediaPlayer.create(this, R.raw.magic_harp);
-        sound.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    public void playSound( int soundFile ){
+        MediaPlayer sound = MediaPlayer.create(this, soundFile);
         sound.start();
     }
 
